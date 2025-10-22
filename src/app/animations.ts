@@ -5,7 +5,7 @@ export function getTitleAnimation(delay = 0, duration = 0.6, once = true) {
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
-      transition: { duration, delay, ease: "easeOut" },
+      transition: { duration, delay },
     },
     viewport: { once },
   };
@@ -17,7 +17,7 @@ export function getSlideUpAnimation(delay = 0, duration = 0.6) {
     whileInView: {
       opacity: 1,
       y: 0,
-      transition: { duration, delay, ease: "easeOut" },
+      transition: { duration, delay },
     },
     viewport: { once: true },
   };
@@ -29,7 +29,7 @@ export function getScaleInAnimation(delay = 0, duration = 0.4) {
     whileInView: {
       opacity: 1,
       scale: 1,
-      transition: { duration, delay, ease: "easeOut" },
+      transition: { duration, delay },
     },
     viewport: { once: true },
   };
@@ -45,7 +45,6 @@ export function getStaggerAnimation(delay = 0, staggerDelay = 0.1) {
         duration: 0.6,
         delay,
         staggerChildren: staggerDelay,
-        ease: "easeOut",
       },
     },
     viewport: { once: true },
